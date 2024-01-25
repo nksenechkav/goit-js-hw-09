@@ -1,0 +1,31 @@
+.gallery {
+    justify-content: center;
+    display: flex;
+    max-width: 1440px;
+    list-style-type: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 24px;
+  }
+  
+  .gallery-item {
+    justify-content: center;
+    align-items: center;
+    border-style: none;
+    cursor: pointer;
+    transition: transform 250ms ease-in-out;
+  }
+  
+  .gallery-image {
+    width: 360px;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+  }  
+  
+  .gallery-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
