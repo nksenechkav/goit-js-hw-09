@@ -4,9 +4,9 @@
   | default @import url()
   |============================
 */
-@import url('.src/css/reset.css');
-@import url('.src/css/1-gallery.css');
-@import url('.src/css/2-form.css');
+@import url('./reset.css');
+@import url('./1-gallery.css');
+@import url('./2-form.css');
 
 
 * {
