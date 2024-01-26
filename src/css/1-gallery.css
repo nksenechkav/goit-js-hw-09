@@ -29,3 +29,9 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   }
   
+  .simple-lightbox .sl-counter {
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }

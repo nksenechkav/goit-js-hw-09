@@ -66,8 +66,6 @@ const images = [
 
 const galleryContainer = document.querySelector('.gallery');
 
-let instance;
-
 function createImagesGallery () {
   const galleryItemsMarkup = images.map(({ preview, original, description}) => {
     return `<li class="gallery-item">
@@ -83,4 +81,18 @@ function createImagesGallery () {
 
   galleryContainer.innerHTML = galleryItemsMarkup;
   
+  galleryContainer.addEventListener("click", (event) => {
+    event.preventDefault();
+    // if (event.target.classList.contains("gallery-image")) {
+    // const image = images.find(
+    //   (img) => img.preview === event.target.src
+    // );
+    new SimpleLightbox(image.original);
+    // }
+});
+
 }
+
+createImagesGallery();
+
+const lightbox = new SimpleLightbox('.gallery a');
