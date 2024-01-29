@@ -1,0 +1,41 @@
+.feedback-form {
+    width: 408px;
+    height: 296px;
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    border-radius: 8px;
+    background: #FFF;
+    flex-direction: column;
+    position: absolute;
+    left: center;
+}
+
+input {
+    width: 360px;
+    height: 72px;
+    border-radius: 4px;
+    border: 1px solid #808080;
+    margin-bottom: 8px;
+}
+
+textarea {
+    width: 360px;
+    height: 112px;
+    border-radius: 4px;
+    border: 1px solid #808080;
+    margin-bottom: 16px;
+}
+
+button {
+    display: block;
+    width: 95px;
+    height: 40px;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+    border-radius: 8px;
+    background: #4E75FF;
+    border: none;
+}
