@@ -64,6 +64,9 @@ const images = [
     },
   ];
 
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
+
 const galleryContainer = document.querySelector('.gallery');
 
 function createImagesGallery () {
@@ -80,19 +83,20 @@ function createImagesGallery () {
 }).join('\n');
 
   galleryContainer.innerHTML = galleryItemsMarkup;
-  
-  galleryContainer.addEventListener("click", (event) => {
-    event.preventDefault();
-    // if (event.target.classList.contains("gallery-image")) {
-    // const image = images.find(
-    //   (img) => img.preview === event.target.src
-    // );
-    new SimpleLightbox(image.original);
-    // }
-});
 
 }
 
 createImagesGallery();
 
-const lightbox = new SimpleLightbox('.gallery a');
+const lightbox = new SimpleLightbox('.gallery a', { 
+  captions:	true,
+  captionSelector:	'img',
+  captionPosition: 'bottom',
+  captionsData:	'alt',
+  captionDelay:	250,
+  OnOverlayClick: true,
+
+});
+
+
+new SimpleLightbox (lightbox);
