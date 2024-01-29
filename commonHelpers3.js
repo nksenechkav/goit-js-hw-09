@@ -8,4 +8,4 @@ import{S as l}from"./assets/vendor-c9def49e.js";(function(){const t=document.cre
             </a>
           </li>`).join(`
 `);d.insertAdjacentHTML("afterbegin",o)}g();const p=new l(".gallery a",{captions:!0,captionSelector:"img",captionPosition:"bottom",captionsData:"alt",captionDelay:250,onOverlayClick:!0,nav:!0,enableKeyboard:!0});p.on("show.simplelightbox");p.refresh();const c="feedback-form-state",i=document.querySelector(".feedback-form");i.querySelector("textarea");i.addEventListener("input",h);i.addEventListener("submit",u);function u(o){o.preventDefault();const t=i.elements.email.value,n=i.elements.message.value;console.log({email:t,message:n}),localStorage.removeItem(c),i.reset()}function h(){const o=i.elements.email.value,t=i.elements.message.value;y(c,{email:o,message:t})}function y(o,t){const n=JSON.stringify(t);localStorage.setItem(o,n)}function f(o){const t=localStorage.getItem(o);try{return JSON.parse(t)}catch{return t}}function b(){const o=f(c)||{};i.elements.email.value=o.email||"Your Email",i.elements.message.value=o.message||"Your Massage"}b();
-//# sourceMappingURL=commonHelpers.js.map
+//# sourceMappingURL=commonHelpers3.js.map
