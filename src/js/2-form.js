@@ -9,8 +9,8 @@ form.addEventListener('submit', onFormSubmit);
 function onFormSubmit(e) {
   e.preventDefault();
 
-  const email = form.elements.email.value;
-  const message = form.elements.message.value;
+  const email = form.elements.email.value.trim();
+  const message = form.elements.message.value.trim();
 
   const data = {
     email,
@@ -24,8 +24,8 @@ function onFormSubmit(e) {
 }
 
 function onFormInput() {
-  const email = form.elements.email.value;
-  const message = form.elements.message.value;
+  const email = form.elements.email.value.trim();
+  const message = form.elements.message.value.trim();
 
   const data = {
     email,
@@ -51,8 +51,8 @@ function loadFromLS(key) {
 
 function init() {
   const data = loadFromLS(STORAGE_KEY) || {};
-  form.elements.email.value = data.email || 'Your Email';
-  form.elements.message.value = data.message || 'Your Massage';
+  form.elements.email.value = data.email || '';
+  form.elements.message.value = data.message || '';
 }
 
 init();
