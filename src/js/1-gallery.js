@@ -95,4 +95,4 @@ createImagesGallery();
     captionDelay: 250,  
   });
 
-  lightbox.on('show.simplelightbox');
+  console.log(lightbox);

@@ -12,6 +12,11 @@ function onFormSubmit(e) {
   const email = form.elements.email.value.trim();
   const message = form.elements.message.value.trim();
 
+  if (email === '' || message === '') {
+    alert('Please fill in all fields');
+    return;
+  }
+
   const data = {
     email,
     message,
@@ -45,14 +50,15 @@ function loadFromLS(key) {
   try {
     return JSON.parse(zip);
   } catch {
-    return zip;
+    return {};
   }
 }
 
 function init() {
   const data = loadFromLS(STORAGE_KEY) || {};
-  form.elements.email.value = data.email || '';
-  form.elements.message.value = data.message || '';
+  form.elements.email.value = data.email.trim() || '';
+  form.elements.message.value = data.message.trim() || '';
 }
 
 init();
+
